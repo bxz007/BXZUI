@@ -42,12 +42,12 @@ namespace Gala.FrameworkEditorTools
         {
             Develop = 0,
             Language = 1,
-            Scene = 3,
-            Format = 4,
-            Font = 5,
-            Texture = 6,
-            Log = 7,
-            Other = 8
+            Scene = 2,
+            Format = 3,
+            Font = 4,
+            Texture = 5,
+            Log = 6,
+            Other = 7
         }
 
         enum EnumAllToolsTAType
