@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace BXZ.UI
+namespace BUI
 {
     public class ViewBase
     {

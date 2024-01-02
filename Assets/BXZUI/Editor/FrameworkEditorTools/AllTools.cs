@@ -42,7 +42,6 @@ namespace Gala.FrameworkEditorTools
         {
             Develop = 0,
             Language = 1,
-            Addressable = 2,
             Scene = 3,
             Format = 4,
             Font = 5,
@@ -101,11 +100,6 @@ namespace Gala.FrameworkEditorTools
         {(int)EnumAllToolsUIType.Language,new List<AllToolsItem>{
             new AllToolsItem(true,"多语言工具",null),
             }},
-        {(int)EnumAllToolsUIType.Addressable,new List<AllToolsItem>{
-            new AllToolsItem(true,"Addressable",null),
-            new AllToolsItem(true,"比较Bundle",ComFoldEditor.OpenWindow),
-            }},
-
         {(int)EnumAllToolsUIType.Scene,new List<AllToolsItem>{
             new AllToolsItem(true,"场景工具",null),
             new AllToolsItem(false,"查找场景上所有cs引用",MyScriptsManagerEditor.Init,"点击查找当前场景引用的所有cs文件"),
