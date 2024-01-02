@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImgInfoTree>
+  <ImgInfoGroup>
+    <ImgInfo ImgPath="D:/workspace/GameLib_Client/PlatformFramework/Assets/LoadResources/UI/Common" TextureType="Default" AndroidFormat="ETC2_RGB4" IOSFormat="ASTC_5x5" Size="Size_1024" Type="UI/Common" />
+    <ImgInfo ImgPath="D:/workspace/GameLib_Client/PlatformFramework/Assets/LoadResources/UI/Loading" TextureType="Default" AndroidFormat="ETC2_RGB4" IOSFormat="ASTC_5x5" Size="Size_1024" Type="UI/Loading" />
+  </ImgInfoGroup>
+</ImgInfoTree>
