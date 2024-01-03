@@ -392,14 +392,20 @@ public class MVCCodeCreator
             CreateCodeHelper createCodeHelper = new CreateCodeHelper();
             createCodeHelper.SetNameSpace(isHotfix ? HotfixSpace : NameSpace);
             createCodeHelper.AddUsing("UnityEngine");
-            createCodeHelper.AddUsing("Platform");
+            createCodeHelper.AddUsing("BUI");
             createCodeHelper.AddAttribute(new AttributeInfo() { Type = "ModuleAttribute", value = CurrentModule });
             createCodeHelper.AddAttribute(new AttributeInfo() { Type = "MvcAttribute", value = MVCName });
             createCodeHelper.SetClassName($"{MVCName}View");
             createCodeHelper.AddClassCommentStatement(mvcComment);
             createCodeHelper.AddBaseType(Parent);
             createCodeHelper.SetPartial(true);
-            createCodeHelper.AddMethodInofs(new MethodInfo() { MethodName = "Init", MethodAtt = MemberAttributes.Public | MemberAttributes.Override });
+            //添加参数
+            List<VariableInfo> variableInfos = new List<VariableInfo>();
+            variableInfos.Add(new VariableInfo() { Name = "data", Type = "System.object"});
+            //添加内容
+            List<string> methodStatements = new List<string>();
+            methodStatements.Add("\t\t\tbase.Init(data);");
+            createCodeHelper.AddMethodInofs(new MethodInfo() { MethodName = "Init", MethodAtt = MemberAttributes.Family | MemberAttributes.Override ,Parameters =  variableInfos,MethodStatements = methodStatements});
             createCodeHelper.Create(ScriptPath);
         }
         CreateViewComponentCodeByDom(Path);

@@ -383,6 +383,9 @@ MonoBehaviour:
   - Key: Transform_Background
     Type: UnityEngine.Transform
     Value: {fileID: 2067904822307608904}
+  - Key: Text_Label
+    Type: UnityEngine.UI.Text
+    Value: {fileID: 7478737428183570345}
   - Key: Image_Image
     Type: UnityEngine.UI.Image
     Value: {fileID: 2350447146349609991}

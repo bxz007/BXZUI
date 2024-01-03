@@ -20,6 +20,8 @@ namespace PlatformHotfix
         
         private UnityEngine.Transform _Transform_Background;
         
+        private UnityEngine.UI.Text _Text_Label;
+        
         private UnityEngine.UI.Image _Image_Image;
         
         protected ComponentItemKey componentItemKey
@@ -38,6 +40,14 @@ namespace PlatformHotfix
             }
         }
         
+        protected UnityEngine.UI.Text Text_Label
+        {
+            get
+            {
+				if(_Text_Label == null)  _Text_Label = componentItemKey.GetObject<UnityEngine.UI.Text>("Text_Label"); return _Text_Label;
+            }
+        }
+        
         protected UnityEngine.UI.Image Image_Image
         {
             get
@@ -49,6 +59,7 @@ namespace PlatformHotfix
         protected override void ReleaseComponent()
         {
 			_Transform_Background = null;
+			_Text_Label = null;
 			_Image_Image = null;
 			_componentItemKey = null;
 			base.ReleaseComponent();

@@ -19,8 +19,10 @@ namespace PlatformHotfix
     [MvcAttribute("TestUI2")]
     public partial class TestUI2View : View
     {
+        
         protected override void Init(object data)
         {
+			base.Init(data);
         }
     }
 }
